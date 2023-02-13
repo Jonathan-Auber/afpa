@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 1024px;
+    margin: 20vh auto;
+}
+
+/* Travail des oreilles */
+.oreille {
+    background-color: #BC8F8F;
+    border: 8px solid #A52A2A;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: scaleX(0.9) scaleY(1.8);
+}
+
+/* Placement des oreilles */
+
+.oreille-gauche {
+    position: relative;
+    top: 140px;
+    left: 290px;
+}
+
+.oreille-droite {
+    position: relative;
+    top: 40px;
+    /* left: 639px; */
+    right: -639px;
+}
+
+/* Travail de la tête */
+.tete {
+    background-color: #A52A2A;
+    width: 380px;
+    height: 270px;
+    border-radius: 30px 30px 70px 70px;
+    position: relative;
+    margin: auto;
+}
+
+/* Travail des yeux */
+.oeil {
+    width: 60px;
+    height: 80px;
+    border-radius: 80px 80px 0 0;
+    background-color: white;
+}
+
+.retine {
+    width: 42px;
+    height: 56px;
+    background-color: black;
+    border-radius: 80px 80px 0 0;
+}
+
+/* Positionnement oeil gauche */
+.oeil-gauche {
+    position: absolute;
+    top: 62px;
+    left: 82px;
+}
+
+.retine-gauche {
+    position: absolute;
+    top: 86px;
+    left: 91px;
+}
+
+/* Positionnement oeil droit */
+
+.oeil-droite {
+    position: absolute;
+    top: 62px;
+    right: 82px;
+    /* test anim */
+    border-top:1px dashed black;
+    transform-origin: bottom;
+    animation: wink 2000ms 500ms;
+}
+
+.retine-droite {
+    position: absolute;
+    top: 86px;
+    right: 91px;
+    /* test anim */
+    transform-origin: bottom;
+    animation: wink 2000ms 500ms;
+}
+
+
+/* Travail du nez */
+
+.nez {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    top: 142px;
+    /* Positionnement central */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Travail de la bouche */
+
+.bouche {
+    width: 190px;
+    height: 42px;
+    background-color: black;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    top: 172px;
+    /* Positionnement central */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animation */
+@keyframes wink {
+    0% {
+        transform: scaleY(1);
+
+    }
+
+    40% {
+        transform: scaleY(0);
+        animation-timing-function: cubic-bezier(1,.09,.83,.67);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
