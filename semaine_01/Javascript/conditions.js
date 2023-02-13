@@ -9,5 +9,5 @@ if (hour >= 6 && hour < 12) {
 }else if ((hour >= 18 && hour <= 24) || (hour >= 0 && hour < 6)) {
     console.log("APERO !!!");
 }else {
-    console.log("Error");
+    console.log("Vous avez trop bu!");
 }

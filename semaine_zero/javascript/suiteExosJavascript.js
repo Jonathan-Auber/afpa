@@ -279,7 +279,7 @@ isSameCase("TOURRES") ➞ true
 */
 
 function isSameCase(str) {
-return (str === (str.toLowerCase() || str.toUpperCase()))
+  return (str === (str.toLowerCase() || str.toUpperCase()))
 }
 
 console.log(isSameCase("GérardTourres"));
@@ -323,6 +323,17 @@ reverseTab([1, 1, 2, 2, 3]) ➞ [3, 2, 2, 1, 1]
 */
 function reverseTab(tab) {
   // Écrivez votre code ici
+  let newTab = [];
+  let data;
+  let i = 0;
+  while (i <= tab.length) {
+    i = 0;
+    data = tab.shift();
+    newTab.unshift(data);
+    i++;
+  }
+
+  return newTab;
 }
 
 // Afficher la sortie
