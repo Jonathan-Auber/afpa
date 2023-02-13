@@ -323,16 +323,27 @@ reverseTab([1, 1, 2, 2, 3]) ➞ [3, 2, 2, 1, 1]
 */
 function reverseTab(tab) {
   // Écrivez votre code ici
-  let newTab = [];
-  let data;
-  let i = 0;
-  while (i <= tab.length) {
-    i = 0;
-    data = tab.shift();
-    newTab.unshift(data);
-    i++;
-  }
 
+  /*  Nouveau tableau
+    let newTab = [];
+    let data;
+    let i = 0;
+    while (i <= tab.length) {
+      i = 0;
+      data = tab.shift();
+      newTab.unshift(data);
+      i++;
+    }
+  
+    */
+
+   let newTab = [];
+   let data;
+   for (let i = 0; i < tab.length; i++) {
+     data = tab.shift();
+     newTab.unshift(data);
+     tab.push(data)
+   } 
   return newTab;
 }
 
