@@ -279,9 +279,12 @@ isSameCase("TOURRES") ➞ true
 */
 
 function isSameCase(str) {
-
+return (str === (str.toLowerCase() || str.toUpperCase()))
 }
 
+console.log(isSameCase("GérardTourres"));
+console.log(isSameCase("gerard"));
+console.log(isSameCase("TOURRES"));
 
 /*
  Exercice 13
@@ -309,6 +312,8 @@ function bissextile(year) {
 }
 
 /*
+Exercice 14
+
 Écrivez une fonction pour inverser un tableau. Attention: N’utilisez pas la méthode intégrée reverse();
 
 Exemple:
