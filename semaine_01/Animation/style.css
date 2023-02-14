@@ -1,0 +1,60 @@
+@keyframes loading {
+    form {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.wrap {
+    width: 1024px;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 200px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 1em;
+}
+
+.green {
+background-color: rgb(106, 219, 106);
+
+}
+
+.red {
+background-color: rgb(236, 153, 10);
+
+}
+
+.contour {
+    border: solid black 3px;
+    border-radius: 15px;
+    width: 400px;
+    height: 20px;
+    padding: 5px;
+}
+
+.barre {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: rgb(145, 236, 145);
+    transform: scaleX(0);
+    transform-origin: left;
+    
+}
+
+.load {
+    animation: loading 2000ms both;
+}
