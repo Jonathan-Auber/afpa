@@ -1,4 +1,6 @@
-
+// Exercice 1 Barre de chargement
+let load = document.querySelector(".barre");
+let button = document.querySelector(".btn");
 
 function loading() {
     if (load.classList == "barre") {
@@ -14,5 +16,26 @@ function loading() {
     }
 }
 
-let load = document.querySelector(".barre");
-let button = document.querySelector(".btn");
+
+
+// Exercice 2 Pop-up
+
+/* function popup () {
+    if (popUp.classList == "ninja d-none") {
+        popUp.classList.remove("d-none");
+    } 
+    else if (popUp.classList !== "ninja d-none"){
+        popUp.classList.add("d-none");
+    }
+} */
+
+// Utilisation de toggle
+
+let img = document.querySelector(".img");
+let popUp = document.querySelector(".ninja");
+
+function popup () {
+    popUp.classList.toggle("d-none");
+}
+
+img.addEventListener("click", popup);
