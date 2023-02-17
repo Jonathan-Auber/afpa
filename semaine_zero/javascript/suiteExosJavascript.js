@@ -57,6 +57,10 @@ function nbrExist(tab, val) {
   return false;
 }
 
+console.log(nbrExist([6, 7, 8], 7));
+console.log(nbrExist([1, 2, 3], 5));
+console.log(nbrExist([], 0));
+
 // OU 
 
 function nbrExist(tab, val) {
@@ -94,6 +98,20 @@ function checkS(str) {
 
 console.log(checkS("Thomas"));
 console.log(checkS("Ali"));
+console.log(checkS("Alex"));
+console.log(checkS("Elvis"));
+
+// Ou 
+
+function checkS(str) {
+return str.endsWith("s");}
+console.log(checkS("Alex"));
+console.log(checkS("Elvis"));
+
+// Ou
+function checkS(str) {
+  return str.at(-1) == 's';
+}
 console.log(checkS("Alex"));
 console.log(checkS("Elvis"));
 
@@ -336,13 +354,13 @@ function reverseTab(tab) {
   
     */
 
-   let newTab = [];
-   let data;
-   for (let i = 0; i < tab.length; i++) {
-     data = tab.shift();
-     newTab.unshift(data);
-     tab.push(data)
-   } 
+  let newTab = [];
+  let data;
+  for (let i = 0; i < tab.length; i++) {
+    data = tab.shift();
+    newTab.unshift(data);
+    tab.push(data)
+  }
   return newTab;
 }
 
@@ -351,7 +369,7 @@ console.log(reverseTab([1, 2, 3]));
 console.log(reverseTab([1, 1, 2, 2, 3]));
 
 
-/*
+/* Exercice 15
 Créez une fonction qui prend un tableau et renvoie le dernier élément du tableau.
 
 Exemple:

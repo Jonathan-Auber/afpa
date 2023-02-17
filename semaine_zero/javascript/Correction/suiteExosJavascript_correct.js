@@ -232,8 +232,7 @@ function isSameCase(str) {
 }
 
 
-/*
- Exercice 13
+/* Exercice 13
 
 Une année bissextile a un jour ajouté à février pour être synchronisée avec l’année saisonnière. Une année bissextile apparaît avec une fréquence régulière, déterminée par la règle ci-dessous:
 
@@ -257,43 +256,7 @@ function bissextile(year) {
     return year %400 === 0 || year %4 === 0 && year %100 !== 0;
   }
 
-  /*
-Écrivez une fonction pour inverser un tableau. Attention: N’utilisez pas la méthode intégrée reverse();
-
-Exemple:
-reverseTab([1, 2, 3]) ➞ [3, 2, 1]
-
-reverseTab([1, 1, 2, 2, 3]) ➞ [3, 2, 2, 1, 1]
-*/
-function reverseTab(tab) {
-	// Écrivez votre code ici
-}
-
-// Afficher la sortie
-console.log(reverseTab([1, 2, 3]));
-console.log(reverseTab([1, 1, 2, 2, 3]));
-
-
-/*
-Créez une fonction qui prend un tableau et renvoie le dernier élément du tableau.
-
-Exemple:
-getLastElem([1, 2, 3, 4]) ➞ 4
-
-getLastElem([‘Alex’, ‘Bob’, ‘Emily’]) ➞ ‘Emily’
-
-
-*/
-
-function getLastElem(tab) {
-	// Écrivez votre code ici
-}
-
-// Afficher la sortie
-console.log(getLastElem([1, 2, 3, 4]));
-console.log(getLastElem(["Alex", "Bob", "Emily"]));
-
-/*
+/* Exercice 14
 Écrivez une fonction pour inverser un tableau. Attention: N’utilisez pas la méthode intégrée reverse();
 
 Exemple:
@@ -315,7 +278,7 @@ console.log(reverseTab([1, 2, 3]));
 console.log(reverseTab([1, 1, 2, 2, 3]));
 
 
-/*
+/* Exercice 15
 Créez une fonction qui prend un tableau et renvoie le dernier élément du tableau.
 
 Exemple:
