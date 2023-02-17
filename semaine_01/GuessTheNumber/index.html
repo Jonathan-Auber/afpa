@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number guessing game</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -17,7 +17,8 @@
 
     <div class="form">
         <label for="guessField">Enter a guess: </label>
-        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <!-- Essaie de réglage du pattern -->
+        <input type="number" min="1" max="100" required id="guessField" class="guessField" autofocus>
         <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 

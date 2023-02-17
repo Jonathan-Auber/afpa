@@ -58,6 +58,7 @@ function checkGuess() {
         resetGame();
     }
     guessField.value = "";
+    guessField.focus();
 }
 
 function resetGame() {

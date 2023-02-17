@@ -1,3 +1,20 @@
+/*
+Exercice 1:
+Créez une fonction pour concaténer deux tableaux entiers.
+
+Exemple:
+concatener([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+
+concatener([9, 8], [1, 5, 6, 7]) ➞ [9, 8, 1, 5, 6, 7]
+
+  ➞ [1, 1, 1, 2, 2, 2]
+
+Les trois points (…) représentent l’opérateur « Spread » qui permet à une expression d’être élargi.
+*/
+
+function concatener(tab1, tab2) {
+    return [...tab1,...tab2]
+  }
 
 /*
 Exercice 2:
@@ -12,29 +29,11 @@ find([6, 7, 8], 9) ➞ -1
 
 */
 function find(tab, val) {
-  if (tab.indexOf(val) >= 0) {
-    return tab.indexOf(val)
-  }
-  return -1;
-}
-
-console.log(find([2, 5, 12], 5));
-console.log(find([2, 5, 12], 6));
-
-// OU 
-
-function find(tab, val) {
-  for (let i = 0; i < tab.length; i++) {
-    if (tab[i] === val) {
-      return i;
+    for(var i = 0; i < tab.length; i++){
+      if(tab[i] == val) return i;
     }
+    return -1;
   }
-  return -1;
-}
-
-console.log(find([2, 5, 12], 5));
-console.log(find([2, 5, 12], 12));
-console.log(find([2, 5, 12], 34));
 
 /*
  Exercice 3:
@@ -43,37 +42,22 @@ console.log(find([2, 5, 12], 34));
 Exemple:
 nbrExist([6, 7, 8], 7) ➞ true
 
-nbrExist([1, 2, 3], 5) ➞ false
+ 
 
 nbrExist([], 0) ➞ false
 */
 
 function nbrExist(tab, val) {
-  for (value of tab) {
-    if (val === value) {
-      return true;
+    for (var i = 0; i < tab.length; i++){
+      if (tab[i] === val){
+        return true;
+      }
     }
+    return false;
   }
-  return false;
-}
 
-// OU 
-
-function nbrExist(tab, val) {
-  for (let i = 0; i < tab.length; i++) {
-    if (tab[i] === val) {
-      return true;
-    }
-  }
-  return false;
-}
-
-console.log(nbrExist([6, 7, 8], 7));
-console.log(nbrExist([1, 2, 3], 5));
-console.log(nbrExist([], 0));
-
-/*
- Exercice 4:
+  /*
+   Exercice 4:
 Créez une fonction qui prend une chaîne (un nom aléatoire). Si le dernier caractère du nom est un « s »,
 retournez TRUE, sinon retournez FALSE.
 
@@ -86,16 +70,11 @@ checkS("Ali") ➞ false
 checkS("Alex") ➞ false
 
 checkS("Elvis") ➞ true
- */
+   */
 
 function checkS(str) {
-  return str[str.length - 1] === "s";
-}
-
-console.log(checkS("Thomas"));
-console.log(checkS("Ali"));
-console.log(checkS("Alex"));
-console.log(checkS("Elvis"));
+    return str[str.length-1] === "s";
+  }
 
 /*
  Exercice 5:
@@ -113,23 +92,25 @@ containSpaces("") ➞ false
 */
 
 function containSpaces(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === " ")
-      return true;
+    return str.includes(' ')
   }
-  return false;
-}
 
-console.log(containSpaces("Thomas"));
+/*
+ Exercice 6 :
+Créez une fonction qui prend une chaîne représentant l’humeur et renvoie une phrase au format suivant: « Aujourd’hui, je me sens {feeling} ». Cependant, si aucun argument n’est passé, retournez « Aujourd’hui, je me sens neutre ».
 
-console.log(containSpaces("Hello World!"));
+Exemple:
 
-console.log(containSpaces(" "));
+myFeeling("heureux") ➞ "Aujourd'hui, je me sens heureux"
 
-console.log(containSpaces(""));
+myFeeling("triste") ➞ "Aujourd'hui, je me sens triste"
 
+myFeeling() ➞ "Aujourd'hui, je me sens neutre"
+*/
 
-
+function myFeeling(feeling) {
+    return "Aujourd'hui, je me sens ${feeling || 'neutre'}"
+  }
 
 /*
  Exercice 7
@@ -150,17 +131,8 @@ checkOrder("aBcD") ➞ true
  */
 
 function checkOrder(str) {
-  return str.toLowerCase() === str.toLowerCase().split('').sort().join('');
-}
-
-console.log(checkOrder("abc"));
-
-console.log(checkOrder("zyx"));
-
-console.log(checkOrder("aabbcc"));
-
-console.log(checkOrder("aBcD"));
-
+    return str === str.split("").sort().join("")
+  }
 
 /*
  * Exercice 8
@@ -175,13 +147,9 @@ addEnd(["aim", "act", "ard"], "ant") ➞ ["aimant", "actant", "ardant"]
 */
 
 function addEnd(tableau, fin) {
-  let t = tableau.map(element => element + fin);
-  return t;
-}
+    return tableau.map(mot => mot + fin);
+  }
 
-
-console.log(addEnd(["accept", "achet", "adapt"], "able"));
-console.log(addEnd(["aim", "act", "ard"], "ant"));
 
 /*
  Exercice 9
@@ -198,17 +166,12 @@ checkIntOrStr("250") ➞ "string"
  */
 
 function checkIntOrStr(x) {
-  if (typeof x === "number") {
-    if (Number.isInteger(x) === true) {
-      return "int"
+    if (typeof x === "number") {
+      return "int";
+    } else if (typeof x === "string") {
+      return "string";
     }
   }
-  return typeof x;
-}
-
-console.log(checkIntOrStr("WayToLearnX"));
-console.log(checkIntOrStr(1));
-console.log(checkIntOrStr("250"));
 
 /*
  
@@ -217,19 +180,15 @@ Créez une fonction qui prend une phrase et renvoie le nombre de mots.
 
 Exemple:
 
-count("Welcome to WWM") ➞ 3
+count("Welcome to WWM) ➞ 3
 
 count("Hello World") ➞ 2
 
 count("I am going to my school") ➞ 6
 */
 function count(str) {
-  return str.split(' ').length;
-}
-
-console.log(count("Welcome to WWM"));
-console.log(count("Hello World"));
-console.log(count("I am going to my school"));
+    return str.split(" ").length;
+  }
 
 /*
  Exercice 11
@@ -248,18 +207,9 @@ sommeImpair(59) ➞ 900
 */
 
 function sommeImpair(n) {
-  let somme = [];
-  for (let i = 0; i <= n; i++) {
-    if (i % 2 === 1) {
-      somme.push(i);
-    }
+    if(n === 1) return 1
+    return n + sommeImpair(n - 2)
   }
-  return somme.reduce((a, b) => a + b);
-}
-
-console.log(sommeImpair(41));
-console.log(sommeImpair(7));
-console.log(sommeImpair(59));
 
 
 /*
@@ -278,12 +228,9 @@ isSameCase("TOURRES") ➞ true
 */
 
 function isSameCase(str) {
-  return (str === (str.toLowerCase() || str.toUpperCase()))
+    return str.toUpperCase() === str || str.toLowerCase() === str;
 }
 
-console.log(isSameCase("GérardTourres"));
-console.log(isSameCase("gerard"));
-console.log(isSameCase("TOURRES"));
 
 /*
  Exercice 13
@@ -307,12 +254,10 @@ bissextile(2000) ➞ true
  */
 
 function bissextile(year) {
-  return year % 400 === 0 || year % 4 === 0 && year % 100 !== 0;
-}
+    return year %400 === 0 || year %4 === 0 && year %100 !== 0;
+  }
 
-/*
-Exercice 14
-
+  /*
 Écrivez une fonction pour inverser un tableau. Attention: N’utilisez pas la méthode intégrée reverse();
 
 Exemple:
@@ -321,29 +266,7 @@ reverseTab([1, 2, 3]) ➞ [3, 2, 1]
 reverseTab([1, 1, 2, 2, 3]) ➞ [3, 2, 2, 1, 1]
 */
 function reverseTab(tab) {
-  // Écrivez votre code ici
-
-  /*  Nouveau tableau
-    let newTab = [];
-    let data;
-    let i = 0;
-    while (i <= tab.length) {
-      i = 0;
-      data = tab.shift();
-      newTab.unshift(data);
-      i++;
-    }
-  
-    */
-
-   let newTab = [];
-   let data;
-   for (let i = 0; i < tab.length; i++) {
-     data = tab.shift();
-     newTab.unshift(data);
-     tab.push(data)
-   } 
-  return newTab;
+	// Écrivez votre code ici
 }
 
 // Afficher la sortie
@@ -363,9 +286,49 @@ getLastElem([‘Alex’, ‘Bob’, ‘Emily’]) ➞ ‘Emily’
 */
 
 function getLastElem(tab) {
-  // Écrivez votre code ici
+	// Écrivez votre code ici
 }
 
 // Afficher la sortie
 console.log(getLastElem([1, 2, 3, 4]));
 console.log(getLastElem(["Alex", "Bob", "Emily"]));
+
+/*
+Écrivez une fonction pour inverser un tableau. Attention: N’utilisez pas la méthode intégrée reverse();
+
+Exemple:
+reverseTab([1, 2, 3]) ➞ [3, 2, 1]
+
+reverseTab([1, 1, 2, 2, 3]) ➞ [3, 2, 2, 1, 1]
+*/
+function reverseTab(tab) {
+  let res = [];
+  for (let i = tab.length -1; i > -1; i--) {
+    res.push(tab[i]);
+  }
+  
+  return res;
+}
+
+// Afficher la sortie
+console.log(reverseTab([1, 2, 3]));
+console.log(reverseTab([1, 1, 2, 2, 3]));
+
+
+/*
+Créez une fonction qui prend un tableau et renvoie le dernier élément du tableau.
+
+Exemple:
+getLastElem([1, 2, 3, 4]) ➞ 4
+
+getLastElem([‘Alex’, ‘Bob’, ‘Emily’]) ➞ ‘Emily’
+
+*/
+
+function getLastElem(tab) {
+  return tab[tab.length - 1]
+}
+// Afficher la sortie
+console.log(getLastElem([1, 2, 3, 4]));
+console.log(getLastElem(["Alex", "Bob", "Emily"]));
+

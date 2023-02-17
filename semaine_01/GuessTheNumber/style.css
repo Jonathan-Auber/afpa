@@ -17,3 +17,13 @@ body {
     color: white;
     padding: 3px;
 }
+
+
+/* Test */
+
+#guessField {
+    width: 150px;
+}
+#guessField:not(:focus):invalid {
+    background-color: rgb(213, 112, 112);
+}
