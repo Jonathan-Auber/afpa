@@ -1,9 +1,9 @@
 Le client vous donne ce site web qui est presque terminer 
-malheureusement l'ancien developpeur n'etait pas asser compétent 
+malheureusement l'ancien développeur n'était pas assez compétent 
 pour réaliser les tache que vous devez réaliser :
 
 
--vous avez un dossier nommé popup-formulaire
+-vous avez un dossier nommé "popup-formulaire"
 -puis un autre dossier qui s'appel popup-success
 
 
@@ -15,19 +15,19 @@ puis lorsqu'ont clique sur inscription, elle voudrai voir le meme popup
 dans le dossier POPUP-FORMULAIRE 
 elle aimerai les champs suivant dans le formulaire:
 
--nom
--prenom
--email
--mot de passe
--confirmez le mot de passe
+- nom
+- prénom
+- email
+- mot de passe
+- confirmez le mot de passe
 
 puis lorsque vous validez elle aimerai qu'il y ai une verification
 pour savoir si les mots de passe son identiques
 
 si ce n'est pas le cas un texte disant , "les mot de passes ne correspondent pas"
-ecris en rouge
+écris en rouge
 
-si c'est le cas alor elle veut avoir le meme popup que dans le dossier POPUP-SUCCESS
+si c'est le cas alors elle veut avoir le meme popup que dans le dossier POPUP-SUCCESS
 
 
 ATTENTION merci de respecter les animations 

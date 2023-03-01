@@ -1,0 +1,43 @@
+nav {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: coral;
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.links a {
+    text-decoration: none;
+    margin-left: 5px;
+    color: white;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+
+    .links {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menu span {
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        margin-top: 4px;
+    }
+}
