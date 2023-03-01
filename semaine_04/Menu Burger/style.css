@@ -21,6 +21,30 @@ body {
     display: none;
 }
 
+/* Carte */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 500px;
+    display: flex;
+    flex: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    box-shadow: 2px 2px 2px black;
+    padding: 10px 0px;
+    overflow: hidden;
+
+}
+
 @media screen and (max-width:500px) {
 
     .links {
@@ -61,7 +85,7 @@ body {
 
     .span_2 {
         display: none;
-}
+    }
 
     .span_3 {
         margin-top: -4px !important;
