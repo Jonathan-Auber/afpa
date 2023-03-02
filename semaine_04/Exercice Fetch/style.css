@@ -13,17 +13,19 @@
 }
 
 /* Carte ID */
-.name {
-    text-align: center;
-    padding: 10px;
-    color: #A5B4FC;
-}
 
 .id-card {
     background-color: #1f2039;
     color: white;
     border-radius: 15px;
     padding: 10px;
+    margin: 20px;
+}
+
+.name {
+    text-align: center;
+    padding: 10px;
+    color: #A5B4FC;
 }
 
 .id-container {
@@ -42,6 +44,12 @@
 .profil-img img {
     object-fit: cover;
     width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: solid white 1px
 }
 
 .info {
