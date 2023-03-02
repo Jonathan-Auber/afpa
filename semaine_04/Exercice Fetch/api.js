@@ -1,5 +1,3 @@
-// Nom, Prénom, MDP, adresse, photo
-
 let container = document.querySelector(".container");
 
 fetch("https://dummyjson.com/users").then((response) => {
