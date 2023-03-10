@@ -1,0 +1,245 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+h1 {
+  text-align: center;
+}
+.main-container {
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.main-container section {
+  margin: 10vh 5vw;
+  background-color: white;
+  box-shadow: 5px 4px 8px #747474;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+/**
+ * En-tête
+ */
+
+.main-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-container header .title {
+  text-align: center;
+  font-size: 2rem;
+  background-color: #125fb6;
+  color: white;
+  border-radius: 5px;
+  display: inline;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.main-container header .title::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-right: 3rem solid transparent;
+  border-bottom: 3rem solid #125fb6;
+  bottom: -0.1rem;
+  right: -1.2rem;
+  transform: rotate(20deg);
+  position: absolute;
+}
+
+/**
+ * Section Question
+ */
+
+.main-container .question-container #question {
+  font-size: 1.2rem;
+  background-color: #125fb6;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  text-align: justify;
+  margin-left: 1rem;
+}
+
+.main-container .question-container #question:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 2rem solid transparent;
+  border-bottom: 2rem solid #125fb6;
+  bottom: -0.2rem;
+  left: -1rem;
+  transform: rotate(-10deg);
+}
+
+.main-container .question-container #answers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5vh 0 0 0;
+  padding: 0;
+}
+
+.main-container .question-container #answers .answer {
+  font-size: 1.2rem;
+  background-color: #1f89b3;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-left: 1rem;
+  display: inline;
+  border: 2px solid #1f89b3;
+  transition: background-color linear 0.2s, color linear 0.2s;
+}
+
+.main-container .question-container #answers .answer:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #1f89b3;
+  transition: background-color linear 0.2s, color linear 0.2s;
+}
+
+/**
+ * Section Resultat
+ */
+
+.main-container .result-container p {
+  font-size: 1.2rem;
+}
+
+/**
+ * Tableau
+ */ 
+ table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background-color: #125fb6;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+.add-task {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.add-task input[type=text] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.add-task button {
+  padding: 10px;
+  width: 30%;
+  border: none;
+  background-color: #125fb6;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color linear 0.2s, color linear 0.2s;
+}
+
+.add-task button:hover {
+  background-color: white;
+  color: #125fb6;
+  transition: background-color linear 0.2s, color linear 0.2s;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.task-actions a {
+  color: #125fb6;
+  transition: color linear 0.2s;
+}
+
+.task-actions a:hover {
+  color: #0c3d84;
+  transition: color linear 0.2s;
+}
+/**
+ * 
+ */
+
+.code-block {
+  background-color: #1e1e1e !important;
+  color: #abb2bf;
+  font-family: 'Fira Code', monospace;
+  
+  overflow-x: auto;
+}
+
+.code-operator {
+  color: #c678dd;
+}
+
+.code-keyword {
+  color: #c678dd;
+}
+
+.code-string {
+  color: #98c379;
+}
+
+.code-number {
+  color: #d19a66;
+}
+
+.code-comment {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.code-punctuation {
+  color: #abb2bf;
+}
+.code-tag {
+  color: #e06c75;
+}
+
+.code-attribute {
+  color: #d19a66;
+}
