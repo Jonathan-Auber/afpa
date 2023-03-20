@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form action="create" method="POST">
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            placeholder="Name"
+            name="lastname"
+          />
+        </div>
+        <div class="mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              placeholder="Firstname"
+              name="firstname"
+            />
+          </div>
+        <div class="mb-2">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-2">
+          <textarea name="message" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Store</button>
+      </form>
+    </div>
+  </body>
+</html>
