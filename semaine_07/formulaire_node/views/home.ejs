@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <h1 class="navbar-brand">Mon application</h1>
+            <a class="navbar-link active" href="/">Accueil</a>
+            <% if (loggedIN) { %>
+                <a class="navbar-link" href="/logout">Se déconnecter</a>
+                <% } else { %>
+                    <a class="navbar-link" href="/login">Se connecter</a>
+                    <a class="navbar-link" href="/signup">Créer un compte</a>
+                    <% } %>
+        </nav>
+    </header>
+
+    <div class="container d-flex flex-column align-items-center">
+        <% if (loggedIN) { %>
+            <h2 class="text-center">Bienvenue sur mon application</h2>
+            <p class="text-center"><%= showEmail %></p>
+            <% } else { %>
+                <h2 class="text-center">Bienvenue sur mon application</h2>
+                <p class="text-center">Connectez-vous ou créez un compte pour application</p>
+                <div>
+                    <a class="btn btn-primary" href="/login">Se connecter</a>
+                    <a class="btn btn-success" href="/signup">Créer un compte</a>
+                </div>
+                <% } %>
+    </div>
+
+</body>
+
+</html>
