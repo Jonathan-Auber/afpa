@@ -7,15 +7,22 @@ foreach ($ennemis as $ennemi) {
     $ennemis_tri[$position] = $pv;
 }
 ksort($ennemis_tri);
-var_dump([$ennemis_tri]);
 
 $batmobile = 0;
 
-var_dump($ennemis_tri[26]);
+foreach ($ennemis_tri as $position => $pv) {
 
-foreach ($ennemis_tri as $ennemi_position) {
-    while ($batmobile < $ennemi_position) {
+    while ($batmobile < $position) {
         $batmobile ++;
         echo "D";
+        if ($batmobile === $position) {
+            $tir = 0;
+            while ($tir < $pv) {
+                $tir .= 10;
+                echo "E";
+            }
+        }
     }
 }
+
+?>
