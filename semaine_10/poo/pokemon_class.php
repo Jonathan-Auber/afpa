@@ -37,13 +37,13 @@ $types2 = ['Herbe', 'Eau', 'Feu', 'Eau', 'Feu', 'Feu', 'Herbe', 'Feu', 'Herbe', 
     }
 }
 
-$pokemonsmons1 = new teams($types);
+$pokemons1 = new teams($types);
 echo "Vous pouvez composer " . $pokemonsmons1->totalTeams() . " équipes !";
 ?>
 
 <br>
 
 <?php
-$pokemonsmons2 = new teams($types2);
+$pokemons2 = new teams($types2);
 echo "Vous pouvez composer " . $pokemonsmons2->totalTeams() . " équipes !";
 
