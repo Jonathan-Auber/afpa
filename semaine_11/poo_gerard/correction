@@ -1,0 +1,97 @@
+<?php
+
+// Exo 2
+class CompteBancaire {
+    
+    private $titulaire;
+    private $solde;
+    
+    public function __construct($titulaire, $solde) {
+        $this->titulaire = $titulaire;
+        $this->solde = $solde;
+    }
+    
+    public function crediter($montant) {
+        $this->solde += $montant;
+    }
+    
+    public function debiter($montant) {
+        if ($this->solde >= $montant) {
+            $this->solde -= $montant;
+        } else {
+            echo "Solde insuffisant.";
+        }
+    }
+    
+    public function afficherSolde() {
+        echo "Solde : " . $this->solde."\n";
+    }
+}
+
+$compte = new CompteBancaire("Jean", 100);
+$compte->crediter(50);
+$compte->afficherSolde(); // Affiche : Solde : 150
+$compte->debiter(80);
+$compte->afficherSolde(); // Affiche : Solde : 70
+$compte->debiter(100); // Affiche : Solde insuffisant.
+
+// Exo 3
+class Mammifere {
+    protected $nom;
+    protected $age;
+    
+    public function __construct($nom, $age) {
+        $this->nom = $nom;
+        $this->age = $age;
+    }
+    
+    public function getInfo() {
+        return "Nom : " . $this->nom . ", Age : " . $this->age ."\n";
+    }
+}
+
+class Chien extends Mammifere {
+    public function aboyer() {
+        echo "Wouaf !";
+    }
+}
+
+$chien = new Chien("Rex", 3);
+echo $chien->getInfo(); // Affiche : Nom : Rex, Age : 3
+$chien->aboyer(); // Affiche : Wouaf !
+
+// Exo 4
+abstract class Forme {
+    abstract public function aire();
+}
+
+class Rectangle extends Forme {
+    private $longueur;
+    private $largeur;
+    
+    public function __construct($longueur, $largeur) {
+        $this->longueur = $longueur;
+        $this->largeur = $largeur;
+    }
+    
+    public function aire() {
+        return "Aire du rectangle : ".$this->longueur * $this->largeur;
+    }
+}
+
+class Cercle extends Forme {
+    private $rayon;
+    
+    public function __construct($rayon) {
+        $this->rayon = $rayon;
+    }
+    
+    public function aire() {
+        return "Aire du cercle : ".pi() * pow($this->rayon, 2);
+    }
+}
+
+$rectangle = new Rectangle(4, 5);
+echo ' '.$rectangle->aire(); // Affiche : 20
+$cercle = new Cercle(3);
+echo ' '.$cercle->aire(); // Affiche : 28.274333882308
